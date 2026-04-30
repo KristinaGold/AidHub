@@ -30,8 +30,8 @@ Whether it's moving a heavy couch, borrowing a tool, or providing professional a
 * **Language:** Kotlin.
 
 * **Architecture:** MVVM with Clean Multu-Module Architecture for maximum scalability and testability.
-    * **:app Module:** Handles the UI layer (Fragments, ViewModels, UI Logic), DI setup, and navigation.
-    * **:data Module:** A standalone module responsible for all data-related logic. It abstracts database access (Firestore), API calls, and Repository patterns, ensuring a strict separation between the Data Layer and the UI Layer.
+    * `:app` **Module:** Handles the UI layer (Fragments, ViewModels, UI Logic), DI setup, and navigation.
+    * `:data` **Module:** A standalone module responsible for all data-related logic. It abstracts database access (Firestore), API calls, and Repository patterns, ensuring a strict separation between the Data Layer and the UI Layer.
 
 * **UI/UX:** 
     * **ViewBinding:** For safe and efficient layout interaction.
@@ -74,29 +74,26 @@ To run this project on your machine:
 ### Cloud Functions Setup:
 To enable the smart notification system and server-side data synchronization:
 
-1. **Prerequisites**
+1. **Prerequisites:**
 * **Node.js:** Ensure you have Node.js installed (LTS version recommended). [Download here](https://nodejs.org/).
 * **Firebase Account:** Your Firebase project must be on the **Blaze Plan** (Pay-as-you-go) to use Cloud Functions.
-2. **Install Firebase CLI**
-Open your terminal and install the Firebase command-line tools globally:
+2. **Install Firebase CLI:** Open your terminal and install the Firebase tools globally:
 ```bash
 npm install -g firebase-tools
 ```
-3. **Authentication**
-Log in to your Google account associated with the Firebase project:
+3. **Authentication:** Log in to your Google account associated with the Firebase project:
 ```bash
 firebase login
 ```
-4. **Initialize & Link Project**
-Navigate to the root directory of the project and initialize the functions (if not already linked):
-```bash
+4. **Initialize & Link Project:** Navigate to the root directory of the project and initialize the functions (if not already linked):
+``` bash
 firebase init functions
 ```
+
 	* Select "Use an existing project" and choose your AidHub project from the list.
 	* When asked about the language, select JavaScript.
 	* If prompted to overwrite index.js or package.json, select No (to keep the existing project logic).
-5. **Deploy to the Cloud**
-To upload the server-side logic (including the FCM notification triggers and User Profile sync logic) to Firebase, run:
+5. **Deploy to the Cloud:** To upload the server-side logic (including the FCM notification triggers and User Profile sync logic) to Firebase, run:
 ```bash
 firebase deploy --only functions
 ```
