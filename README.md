@@ -89,10 +89,9 @@ firebase login
 ``` bash
 firebase init functions
 ```
-
-	* Select "Use an existing project" and choose your AidHub project from the list.
-	* When asked about the language, select JavaScript.
-	* If prompted to overwrite index.js or package.json, select No (to keep the existing project logic).
+* Select "Use an existing project" and choose your AidHub project from the list.
+* When asked about the language, select JavaScript.
+* If prompted to overwrite index.js or package.json, select No (to keep the existing project logic).
 5. **Deploy to the Cloud:** To upload the server-side logic (including the FCM notification triggers and User Profile sync logic) to Firebase, run:
 ```bash
 firebase deploy --only functions
