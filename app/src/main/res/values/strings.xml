@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">AidHub</string>
+    <string name="see_all"><u>See all</u></string>
+    <string name="welcome_title">Welcome to AidHub</string>
+    <string name="Member_since">Member since:</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="complete_your_profile">Complete Your Profile</string>
+    <string name="select_your_skills">Select your skills:</string>
+    <string name="start">Start</string>
+    <string name="new_post">New Post</string>
+    <string name="new_request">New Request</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="upload_photo">Upload Photo</string>
+    <string name="publish">Publish</string>
+    <string name="select_tag">Select Tag (From your current skills):</string>
+    <string name="setup_profile">Tell the AidHub community a bit about yourself.</string>
+    <string name="full_name">Full Name</string>
+    <string name="bio">Bio</string>
+    <string name="update_skills">Update Skills:</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="cancel">Cancel</string>
+    <string name="Settings">Settings</string>
+
+
+
+</resources>

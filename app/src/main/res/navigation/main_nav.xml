@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/feedFragment">
+
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="com.example.aidhub.fragments.mainNavFragments.FeedFragment"
+        android:label="FeedFragment"
+        >
+        <action
+            android:id="@+id/action_feedFragment_to_chatRoomFragment"
+            app:destination="@id/chatRoomFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+        <action
+            android:id="@+id/action_feedFragment_to_profileFragment"
+            app:destination="@id/otherUserProfileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_feedFragment_to_fullScreenImageFragment"
+            app:destination="@id/fullScreenImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatRoomFragment"
+        android:name="com.example.aidhub.fragments.ChatRoomFragment"
+        android:label="ChatRoomFragment" >
+        <action
+            android:id="@+id/action_chatRoomFragment_to_chatFragment"
+            app:destination="@id/chatFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_chatRoomFragment_to_profileFragment"
+            app:destination="@id/otherUserProfileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.aidhub.fragments.mainNavFragments.ChatFragment"
+        android:label="ChatFragment"
+        >
+        <action
+            android:id="@+id/action_chatFragment_to_chatRoomFragment"
+            app:destination="@id/chatRoomFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.aidhub.fragments.mainNavFragments.MapFragment"
+        android:label="MapFragment"
+        >
+        <action
+            android:id="@+id/action_mapFragment_to_requestPreviewFragment"
+            app:destination="@id/requestPreviewFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/requestPreviewFragment"
+        android:name="com.example.aidhub.fragments.bottomDialogFragments.RequestPreviewFragment"
+        android:label="RequestPreviewFragment">
+        <action
+            android:id="@+id/action_requestPreviewFragment_to_chatRoomFragment"
+            app:destination="@id/chatRoomFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_requestPreviewFragment_to_requestFragment"
+            app:destination="@id/requestFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </dialog>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.aidhub.fragments.mainNavFragments.ProfileFragment"
+        android:label="My Profile">
+        <action
+            android:id="@+id/action_profileFragment_to_requestFragment"
+            app:destination="@id/requestFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_profileFragment_to_allUserRequestsFragment"
+            app:destination="@id/allUserRequestsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_userRequestsFragment_to_requestFragment"
+            app:destination="@id/requestFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/otherUserProfileFragment"
+        android:name="com.example.aidhub.fragments.mainNavFragments.ProfileFragment"
+        android:label="User Profile">
+
+        <action
+            android:id="@+id/action_otherUserProfileFragment_to_requestFragment"
+            app:destination="@id/requestFragment" />
+        <action
+            android:id="@+id/action_userRequestsFragment_to_requestFragment"
+            app:destination="@id/requestFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/requestFragment"
+        android:name="com.example.aidhub.fragments.RequestFragment"
+        android:label="RequestFragment">
+        <action
+            android:id="@+id/action_requestFragment_to_ratingDialogFragment"
+            app:destination="@id/ratingDialogFragment">
+            <argument
+                android:name="helperId"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_requestFragment_to_chatRoomFragment"
+            app:destination="@id/chatRoomFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_requestFragment_to_profileFragment"
+            app:destination="@id/otherUserProfileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_requestFragment_to_fullScreenImageFragment"
+            app:destination="@id/fullScreenImageFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/ratingDialogFragment"
+        android:name="com.example.aidhub.fragments.bottomDialogFragments.RatingDialogFragment"
+        />
+    <fragment
+        android:id="@+id/allUserRequestsFragment"
+        android:name="com.example.aidhub.fragments.RequestsArchiveFragment"
+        android:label="UserRequestsFragment" >
+
+        <action
+            android:id="@+id/action_allUserRequestsFragment_to_requestFragment"
+            app:destination="@id/requestFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.example.aidhub.fragments.NotificationsFragment"
+        android:label="NotificationsFragment" >
+        <action
+            android:id="@+id/action_notificationsFragment_to_requestFragment"
+            app:destination="@id/requestFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.aidhub.fragments.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.aidhub.fragments.AboutFragment"
+        android:label="AboutFragment" />
+    <fragment
+        android:id="@+id/fullScreenImageFragment"
+        android:name="com.example.aidhub.fragments.FullScreenImageFragment"
+        android:label="FullScreenImageFragment" />
+    <fragment
+        android:id="@+id/userRequestsFragment"
+        android:name="com.example.aidhub.fragments.tabFragments.UserRequestsFragment"
+        android:label="UserRequestsFragment" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/newPostFragment"
+        android:name="com.example.aidhub.fragments.NewPostFragment"
+        android:label="NewPostFragment" />
+    <fragment
+        android:id="@+id/newRequestFragment"
+        android:name="com.example.aidhub.fragments.NewRequestFragment"
+        android:label="NewRequestFragment" />
+</navigation>

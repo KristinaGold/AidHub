@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/secondary_background"
+        >
+        <TextView
+            android:id="@+id/txtReviews"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginStart="15dp"
+            android:layout_centerVertical="true"
+            android:text="No reviews yet"
+            android:textColor="@color/text"
+            android:fontFamily="@font/open_sans"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvReviews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/secondary_background"
+        tools:listitem="@layout/item_review"
+        android:nestedScrollingEnabled="false">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

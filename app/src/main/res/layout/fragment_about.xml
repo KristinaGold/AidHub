@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/background"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="start"
+            app:icon="@drawable/ic_cancel"
+            app:iconSize="26dp"
+            app:iconTint="@color/title_text"
+            app:rippleColor="@color/grey"
+            app:strokeWidth="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textColor="@color/title_text"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topBar"
+        android:background="@color/background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/app_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="AidHub"
+                android:textColor="@color/text"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Version 1.0.0"
+                android:textColor="@color/secondary_text" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_mission"
+                    app:tint="@color/title_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Our Mission"
+                    android:textColor="@color/title_text"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="120dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="AidHub was founded on a simple yet powerful belief: No one should have to face a challenge alone."
+                    android:textColor="@color/secondary_text" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="We are a community-driven platform designed to bridge the gap between people who need a helping hand and those who are eager to give one. "
+                    android:textColor="@color/secondary_text" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Whether it’s a flat tire, moving a heavy couch, or needing a quick professional advice, AidHub turns neighbors into heroes."
+                    android:textColor="@color/secondary_text" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="24dp"
+                android:text="How it works?"
+                android:textAlignment="center"
+                android:textColor="@color/title_text"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="28dp"
+                app:cardBackgroundColor="@color/transparent"
+                app:strokeColor="@color/grey">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="24dp"
+                    android:paddingVertical="18dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="16dp"
+                        app:cardBackgroundColor="#FFC4FF"
+                        app:cardCornerRadius="18dp"
+                        app:strokeColor="@color/grey"
+                        app:strokeWidth="0dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="12dp"
+                            android:src="@drawable/ic_request"
+                            app:tint="#833194" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Post a Request"
+                        android:textAlignment="center"
+                        android:textColor="@color/text"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineSpacingExtra="2dp"
+                        android:text="Describe what you need, set your location, and wait for a nearby helper to respond."
+                        android:textAlignment="center"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="36dp"
+                android:rotation="180"
+                android:src="@drawable/ic_arrow_down"
+                app:tint="@color/secondary_text" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="28dp"
+                app:cardBackgroundColor="@color/transparent"
+                app:strokeColor="@color/grey">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="24dp"
+                    android:paddingVertical="18dp">
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="16dp"
+                        app:cardBackgroundColor="#B6FFFF"
+                        app:cardCornerRadius="18dp"
+                        app:strokeColor="@color/grey"
+                        app:strokeWidth="0dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="12dp"
+                            android:src="@drawable/ic_help"
+                            app:tint="#3095A2" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Offer Help"
+                        android:textAlignment="center"
+                        android:textColor="@color/text"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:lineSpacingExtra="2dp"
+                        android:text="Browse local requests and use your skills or time to assist someone in your community."
+                        android:textAlignment="center"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginVertical="36dp"
+                android:rotation="180"
+                android:src="@drawable/ic_arrow_down"
+                app:tint="@color/secondary_text" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="28dp"
+                app:cardBackgroundColor="@color/transparent"
+                app:strokeColor="@color/grey">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="24dp"
+                    android:paddingVertical="18dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="16dp"
+                        app:cardBackgroundColor="#D7FFD9"
+                        app:cardCornerRadius="18dp"
+                        app:strokeColor="@color/grey"
+                        app:strokeWidth="0dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="12dp"
+                            android:src="@drawable/ic_badge"
+                            app:tint="#446246" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Earn Points &amp; Recognition"
+                        android:textAlignment="center"
+                        android:textColor="@color/text"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:lineSpacingExtra="2dp"
+                        android:text="Every act of kindness is rewarded with points and ratings, building a trusted profile within the AidHub network."
+                        android:textAlignment="center"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_policy"
+                    app:tint="@color/title_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Guidelines &amp; Policies"
+                    android:textColor="@color/title_text"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="120dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="To keep AidHub a safe and positive space for everyone, we ask our users to adhere to the following:"
+                    android:textColor="@color/secondary_text" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="1. Safety First"
+                     />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="While AidHub facilitates connections, always prioritize your personal safety. Meet in public spaces when possible, and let someone know your location when heading out to help or receive aid."
+                    android:textColor="@color/secondary_text" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="2. Respect and Kindness"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="We have zero tolerance for harassment, discrimination, or abusive behavior. Treat every member of the community with the same respect you would expect in return."
+                    android:textColor="@color/secondary_text" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="3. Reliability"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="If you commit to helping someone, please show up. Our rating system ensures that the most reliable helpers are recognized, while consistent 'no-shows' may face account restrictions."
+                    android:textColor="@color/secondary_text" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="4. Privacy Policy"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Your privacy is our priority. We only use your location data to show you relevant nearby requests. Your exact address is never shared publicly; we only provide a general radius to maintain your security."
+                    android:textColor="@color/secondary_text" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="5. No Commercial Solicitations"
+                    android:textColor="@color/text"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="AidHub is a platform for mutual aid and community support. Using the app to spam, advertise commercial services, or solicit money outside of the app's intended spirit is strictly prohibited."
+                    android:textColor="@color/secondary_text" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact &amp; Support"
+                    android:textColor="@color/title_text"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="120dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Got questions? Suggestions? Or just want to share a heartwarming story of help? We’d love to hear from you!"
+                    android:textColor="@color/secondary_text" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Email: support@aidhub.com"
+                    android:textColor="@color/secondary_text" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Follow us: @AidHub_Community"
+                    android:textColor="@color/secondary_text" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Version: 1.0.0 (Beta)"
+                    android:textColor="@color/secondary_text" />
+            </LinearLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnContactEmail"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="@color/secondary_btn_background_color"
+                android:text="Contact Support"
+                android:textColor="@color/on_secondary_btn_color"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:cornerRadius="20dp"
+                app:icon="@drawable/ic_email"
+                app:iconGravity="textStart"
+                app:iconSize="30dp"
+                app:iconTint="@color/on_secondary_btn_color"
+                app:rippleColor="@color/grey"
+                app:strokeColor="@color/on_secondary_btn_color"
+                app:strokeWidth="3dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

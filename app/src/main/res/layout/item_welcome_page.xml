@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/secondary_background"
+    android:padding="32dp">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/location" />
+
+    <TextView
+        android:id="@+id/txtPageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TITLE"
+        android:textColor="@color/text"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtPageDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Description"
+        android:textColor="@color/secondary_text"
+        android:textSize="16sp" />
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTurnOn"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/primary_btn_background_color"
+        android:text="Turn on"
+        android:textColor="@color/on_primary_btn_color"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSkip"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="20dp"
+        android:text="Skip"
+        android:textColor="@color/primary_btn_background_color"
+        app:cornerRadius="20dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/transparent"
+        app:strokeColor="@color/primary_btn_background_color"
+        app:strokeWidth="3dp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

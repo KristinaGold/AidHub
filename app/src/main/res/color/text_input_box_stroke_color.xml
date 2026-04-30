@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Focused state (e.g., when the user taps on it) -->
+    <item android:color="@color/text" android:state_focused="true" />
+    <!-- Disabled state -->
+    <item android:color="@color/light_grey" android:state_enabled="false" />
+    <!-- Default/unfocused state -->
+    <item android:color="@color/black" />
+</selector>

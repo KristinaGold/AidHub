@@ -1,0 +1,189 @@
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/background">
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainer"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/main_nav" />
+
+
+        <RelativeLayout
+            android:id="@+id/nav_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bg_bottom_nav"
+                app:itemActiveIndicatorStyle="@color/black"
+                app:itemIconTint="@color/nav_item_color"
+                app:itemTextColor="@color/nav_item_color"
+                app:labelVisibilityMode="auto"
+                app:menu="@menu/bottom_nav_menu" />
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnAdd"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_alignTop="@id/bottomNavigationView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-10dp"
+                android:backgroundTint="@color/primary"
+                android:src="@drawable/ic_add"
+                app:borderWidth="0dp"
+                app:elevation="12dp"
+                app:fabCustomSize="65dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.App.Circle"
+                app:tint="@color/button_icon_color" />
+
+
+        </RelativeLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/addLayoutContainer"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_above="@id/nav_wrapper"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="12dp"
+            android:animateLayoutChanges="true"
+            android:backgroundTint="@color/background"
+            android:paddingTop="5dp"
+            android:visibility="gone"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeColor="@color/icon_color"
+            app:strokeWidth="2dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/btnRequest"
+                    android:layout_width="110dp"
+                    android:layout_height="48dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Request"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:textColor="@color/icon_color"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/secondary_text" />
+
+
+                <LinearLayout
+                    android:id="@+id/btnPost"
+                    android:layout_width="110dp"
+                    android:layout_height="48dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Post"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:textColor="@color/icon_color"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/loadingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/primary_transparent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="false"
+                app:lottie_rawRes="@raw/log_out" />
+
+            <TextView
+                android:id="@+id/txtSignOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logging out.."
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/topMenuNavView"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        app:drawerLayoutCornerSize="40dp"
+        android:layout_gravity="start"
+        app:menu="@menu/settings_menu"
+        android:backgroundTint="@color/primary_transparent"
+        app:itemTextColor="@color/text"
+        app:itemTextAppearance="@style/normal_text"/>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
+

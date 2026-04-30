@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ratingDialogFragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog"
+        android:clipToOutline="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:background="@color/dialog_view_background" />
+
+            <TextView
+                android:id="@+id/txtTitle"
+                style="@style/subtitle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="How would you rate this request?"
+                android:textColor="@color/text"
+                android:textSize="18sp" />
+
+
+            <com.github.bilalnasir9.library.ratingbar.CustomRatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:iconEmpty="@drawable/ic_star_empty"
+                app:iconFilled="@drawable/ic_star_filled"
+                app:iconSize="42dp"
+                app:stepSize="0.5"
+                app:iconHalf="@drawable/ic_star_half"
+                app:readOnly="false"
+                app:iconPadding="3dp"
+                app:maxRating="5" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="12dp"
+                android:hint="Write a review (optional)"
+                android:textColorHint="@color/grey"
+                app:boxBackgroundColor="@color/edit_box_background"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/text_input_box_stroke_color"
+                app:counterTextColor="@color/black"
+                app:cursorColor="@color/grey"
+                app:cursorErrorColor="@color/black"
+                app:helperTextEnabled="false"
+                app:hintTextColor="@color/grey"
+                app:placeholderTextColor="@color/text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editReview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|start"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:minLines="3"
+                    android:scrollHorizontally="false"
+                    android:textColor="@color/text"
+                    android:textColorHint="@color/grey" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubmitRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/PrimaryButton"
+                android:text="Submit"
+                 />
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

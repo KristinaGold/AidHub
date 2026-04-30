@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="stroke_color">@color/lightGrey_transparent</color>
+
+    <!-- dark app colors -->
+    <color name="primary">#CEBFFD</color>
+    <color name="primary_transparent">#88DFD8F6</color>
+    <color name="secondary">#4B3E75</color>
+    <color name="secondary_transparent">#984B3E75</color>
+    <color name="background">#29282F</color>
+    <color name="secondary_background">#1F1E25</color>
+
+    <!-- dark background colors -->
+    <color name="unread_background">@color/background</color>
+    <color name="read_background">@color/secondary_background</color>
+    <color name="chatroom_background">@color/background</color>
+    <color name="chatroom_type_background">@color/secondary_background</color>
+    <color name="notification_background">@color/neon_pink</color>
+    <color name="sent_bubble_color">@color/green</color>
+    <color name="received_bubble_color">@color/grey</color>
+    <color name="dialog_view_background">@color/grey</color>
+    <color name="botton_nav_background">@color/secondary_background</color>
+    <color name="icon_background">#6b29282F</color>
+    <color name="review_background">#CBFFFBF5</color>
+    <color name="review_stroke">#fde7c5</color>
+
+    <!-- dark text colors -->
+    <color name="badge_text_color">@color/white</color>
+    <color name="title_text">@color/white</color>
+    <color name="text">@color/white</color>
+    <color name="secondary_text">#A8A8A8</color>
+    <color name="hint_text">@color/light_grey</color>
+
+
+    <!-- dark button colors -->
+    <color name="on_primary_btn_color">@color/white</color>
+    <color name="primary_btn_background_color">@color/primary</color>
+
+    <color name="on_secondary_btn_color">@color/secondary</color>
+    <color name="secondary_btn_background_color">@color/white</color>
+
+    <color name="button_icon_color">@color/white</color>
+    <color name="like_button">#B4DE3131</color>
+    <color name="check_color">@color/green_menta</color>
+    <color name="nav_item_checked_color">@color/white</color>
+    <color name="nav_item_unchecked_color">@color/light_grey</color>
+
+
+    <!-- icons colors -->
+    <color name="icon_color">@color/primary</color>
+
+    <!-- dark edit box colors -->
+    <color name="edit_box_background">@color/background</color>
+
+    <!-- dark switch button colors -->
+    <color name="btn_switch_background_checked">@color/grey</color>
+    <color name="btn_switch_background_unchecked">@color/light_grey</color>
+    <color name="btn_switch_thumb_checked">@color/primary</color>
+    <color name="btn_switch_thumb_unchecked">@color/secondary</color>
+
+    <!-- dark skill chips colors -->
+    <color name="chip_background_checked">@color/secondary_transparent</color>
+    <color name="chip_background_unchecked">#3DFFFFFF</color>
+    <color name="chip_text_checked">@color/primary</color>
+    <color name="chip_text_unchecked">@color/primary</color>
+
+
+    <!-- dark status chips colors -->
+    <color name="status_in_progress_background">#FFC947</color>
+
+    <color name="status_open_background">#1976D2</color>
+
+    <color name="status_closed_background">#B8DB80</color>
+
+    <color name="status_cancelled_background">#D50000</color>
+    <color name="status_cancelled_stroke">#FF867C</color>
+</resources>

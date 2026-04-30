@@ -1,0 +1,86 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AidHub" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="android:windowBackground">@color/white</item>
+        <!-- Customize your light theme here. -->
+
+    </style>
+
+    <style name="Theme.AidHub" parent="Base.Theme.AidHub" />
+
+    <style name="BottomRoundedAppearance" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">0dp</item><item name="cornerSizeBottomLeft">25dp</item>
+        <item name="cornerSizeBottomRight">25dp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+    <style name="ProfileImage" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:src">@drawable/ic_profile_placeholder</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.App.Circle</item>
+        <item name="android:background">@color/background</item>
+        <item name="strokeColor">@color/secondary_background</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:padding">2dp</item>
+
+    </style>
+
+    <style name="ProfileTitles" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">52dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/title_text</item>
+    </style>
+
+
+    <style name="CustomTabStyle" parent="Widget.Design.TabLayout">
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabMinWidth">0dp</item>
+    </style>
+
+    <style name="title_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/open_sans_bold</item>
+    </style>
+    <style name="subtitle_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/open_sans_semibold</item>
+    </style>
+    <style name="normal_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/open_sans</item>
+    </style>
+
+    <style name="PrimaryButton" parent="Widget.Material3.Button.TextButton">
+        <item name="android:layout_marginHorizontal">2dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:textColor">@color/on_primary_btn_color</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="backgroundTint">@null</item>
+
+    </style>
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+
+        <item name="windowSplashScreenAnimatedIcon">@android:color/transparent</item>
+
+        <item name="postSplashScreenTheme">@style/Theme.AidHub</item>
+    </style>
+
+</resources>

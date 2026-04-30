@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/secondary_background"
+    android:paddingBottom="60dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_topbar_gradient"
+        android:clipToOutline="true"
+        >
+
+        <include
+            android:id="@+id/topBar"
+            layout="@layout/layout_topbar" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:clipToPadding="false"
+        android:layout_marginTop="12dp"
+        tools:listitem="@layout/item_chat">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary_background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/layout_from_bottom_top_bar"
+        />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topBar"
+        android:layout_marginBottom="68dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/userInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgProfilePicture"
+                        style="@style/ProfileImage" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtFullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Full name"
+                    android:textColor="@color/text"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="@string/description"
+                    android:textColorHint="@color/hint_text"
+                    app:boxBackgroundColor="@color/edit_box_background"
+                    app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="@color/text_input_box_stroke_color"
+                    app:counterTextColor="@color/text"
+                    app:cursorColor="@color/hint_text"
+                    app:cursorErrorColor="@color/black"
+                    app:helperTextEnabled="false"
+                    app:hintTextColor="@color/hint_text"
+                    app:placeholderTextColor="@color/hint_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans"
+                        android:gravity="top|start"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:minLines="5"
+                        android:scrollHorizontally="false"
+                        android:textColor="@color/text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnUploadPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/secondary"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:text="@string/upload_photo"
+                    android:textColor="@color/on_primary_btn_color"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:strokeColor="@color/on_secondary_btn_color"
+                    app:strokeWidth="2dp"
+                    app:toggleCheckedStateOnClick="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:text="@string/select_tag"
+                    android:textColor="@color/title_text"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/cgEditSkills"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:clipToPadding="false"
+                    android:gravity="center"
+                    android:paddingHorizontal="2dp"
+                    app:chipSpacingHorizontal="12dp"
+                    app:chipSpacingVertical="4dp"
+
+                    app:singleLine="false" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPublish"
+        style="@style/PrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/publish"
+        />
+
+    <FrameLayout
+        android:id="@+id/progressBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_transparent"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/primary" />
+
+    </FrameLayout>
+
+</RelativeLayout>

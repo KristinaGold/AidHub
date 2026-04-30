@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:backgroundTint="@color/secondary_background"
+    android:paddingBottom="50dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/secondary_background"
+        >
+
+        <TextView
+            android:id="@+id/txtRequests"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginStart="15dp"
+            android:layout_centerVertical="true"
+            android:text="No open requests"
+            android:textColor="@color/text"
+            android:fontFamily="@font/open_sans"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Material3.Button.TextButton"
+            android:id="@+id/btnMoreRequests"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_alignParentEnd="true"
+            android:text="@string/see_all"
+            android:fontFamily="@font/open_sans_bold"
+            app:rippleColor="@color/light_grey"
+            android:layout_centerVertical="true"
+            android:textColor="@color/secondary"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRequests"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/secondary_background"
+        android:nestedScrollingEnabled="false">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

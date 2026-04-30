@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/chatroom_background"
+
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginTop="10dp"
+            android:background="@color/chatroom_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+
+                >
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBack"
+                    style="@style/Widget.Material3.Button.IconButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    app:icon="@drawable/ic_back"
+                    app:iconSize="24dp"
+                    app:rippleColor="@color/grey"
+                    app:iconTint="@color/button_icon_color"
+                    app:strokeWidth="0dp"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/chatImagePreview"
+                    style="@style/ProfileImage"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:clickable="true" />
+
+                <TextView
+                    style="@style/subtitle_text"
+                    android:id="@+id/txtChatName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/text"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMessages"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/chatroom_background"
+            android:padding="8dp"
+            android:clipToPadding="false"/>
+
+
+        <LinearLayout
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_chatroom_bottom"
+            android:gravity="center_vertical"
+            app:backgroundTint="@null"
+            android:orientation="horizontal"
+            android:paddingBottom="14dp"
+            android:paddingHorizontal="8dp"
+            android:paddingTop="8dp">
+
+
+            <EditText
+                android:id="@+id/etMessageInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_edit_text_chat"
+                android:hint="Type a message.."
+                android:padding="7dp"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSend"
+                style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                app:icon="@drawable/ic_send"
+                app:iconGravity="textEnd"
+                app:iconSize="30dp"
+                app:iconTint="@color/button_icon_color"
+                app:rippleColor="@color/grey"
+                app:strokeWidth="0dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+        <FrameLayout
+            android:id="@+id/progressBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey_transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/primary" />
+
+        </FrameLayout>
+
+</FrameLayout>
