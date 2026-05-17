@@ -22,6 +22,7 @@ import com.example.data.dataStractures.DialogType
 import com.example.data.dataStractures.Post
 import com.example.data.dataStractures.ToastType
 import com.example.aidhub.databinding.FragmentFeedBinding
+import com.example.aidhub.managers.AnimationManager
 import com.example.aidhub.utilities.Constants
 import com.example.aidhub.utilities.DialogHelper
 import com.example.aidhub.utilities.ToastHelper
@@ -54,7 +55,6 @@ class FeedFragment : BaseFragment<FragmentFeedBinding>() {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
         setupFilterRecyclerView()
-        appBarLayout()
         observePosts()
         observeLoadingState()
         searchPosts()
@@ -77,6 +77,11 @@ class FeedFragment : BaseFragment<FragmentFeedBinding>() {
             }
 
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        appBarLayout()
     }
 
     private fun searchPosts() {
@@ -112,11 +117,13 @@ class FeedFragment : BaseFragment<FragmentFeedBinding>() {
             if (percentage > 0.8f && !isSearchCollapsed) {
                 isSearchCollapsed = true
                 toggleSearchAnimation(true)
+                showLogo()
                 hideKeyboard()
                 topBarBinding.searchViewSkills.clearFocus()
             } else if (percentage < 0.2f && isSearchCollapsed) {
                 isSearchCollapsed = false
                 toggleSearchAnimation(false)
+                hideLogo()
             }
         }
 
@@ -124,6 +131,7 @@ class FeedFragment : BaseFragment<FragmentFeedBinding>() {
             isManuallyOpened = true
             isSearchCollapsed = false
             toggleSearchAnimation(false)
+            hideLogo()
         }
 
         binding.recyclerViewFeed.addOnScrollListener(object : RecyclerView.OnScrollListener() {
@@ -134,6 +142,7 @@ class FeedFragment : BaseFragment<FragmentFeedBinding>() {
                         isManuallyOpened = false
                         isSearchCollapsed = true
                         toggleSearchAnimation(true)
+                        showLogo()
                         hideKeyboard()
                         topBarBinding.searchViewSkills.clearFocus()
                     }

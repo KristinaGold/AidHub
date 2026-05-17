@@ -59,6 +59,7 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
             chipGroupStatus.visibility = View.GONE
             screenTitle.visibility = View.GONE
             btnSettings.visibility = View.GONE
+            txtAidHub.visibility = View.GONE
         }
     }
 
@@ -109,6 +110,13 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
             visibility = View.VISIBLE
             setOnClickListener { onClick() }
         }
+    }
+
+    protected fun showLogo(){
+        AnimationManager.fadeIn(topBarBinding.txtAidHub)
+    }
+    protected fun hideLogo(){
+        topBarBinding.txtAidHub.visibility = View.GONE
     }
 
     protected fun showSettingsButton() {

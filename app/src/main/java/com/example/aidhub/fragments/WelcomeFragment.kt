@@ -34,6 +34,7 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
         ActivityResultContracts.RequestPermission()
     ) { isGranted ->
         if (!isGranted) settingsManager.openAppSettings(requireActivity())
+        else viewPagerProgress()
 
     }
 

@@ -79,21 +79,22 @@
             android:id="@+id/searchContainer"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="start"
-            android:orientation="horizontal"
-            android:layout_marginEnd="6dp"
-            android:animateLayoutChanges="false"
-            android:layout_toStartOf="@+id/topHelpRequest"
             android:layout_alignParentStart="true"
+            android:layout_marginEnd="6dp"
+            android:layout_toStartOf="@+id/topHelpRequest"
+            android:animateLayoutChanges="false"
             android:focusable="true"
             android:focusableInTouchMode="true"
-            >
+            android:gravity="start"
+            android:orientation="horizontal">
 
             <androidx.appcompat.widget.SearchView
                 android:id="@+id/searchViewSkills"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/bg_search_view"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
                 android:inputType="textCapWords"
                 android:visibility="visible"
                 app:closeIcon="@drawable/ic_close"
@@ -101,9 +102,39 @@
                 app:queryBackground="@color/transparent"
                 app:queryHint="Search posts"
                 app:rippleColor="@color/grey"
-                app:searchIcon="@drawable/ic_search"
-                android:focusable="false"
-                android:focusableInTouchMode="false"/>
+                app:searchIcon="@drawable/ic_search" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/txtAidHub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                style="@style/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aid"
+                android:textAlignment="center"
+                android:textColor="@color/icon_color"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"/>
+
+            <TextView
+                style="@style/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hub"
+                android:textAlignment="center"
+                android:textColor="@color/light_grey"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"/>
         </LinearLayout>
 
         <com.google.android.material.button.MaterialButton

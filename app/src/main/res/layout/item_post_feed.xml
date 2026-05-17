@@ -4,7 +4,6 @@
     android:id="@+id/cardLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="12dp"
     android:animateLayoutChanges="true"
     android:clickable="false"
     app:cardBackgroundColor="@color/transparent"
@@ -20,11 +19,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginHorizontal="12dp"
-            android:layout_marginVertical="6dp"
+            android:layout_marginVertical="12dp"
             app:cardCornerRadius="20dp"
             app:cardElevation="6dp"
-            app:strokeWidth="0dp"
-            app:strokeColor="@color/stroke_color">
+            app:strokeColor="@color/stroke_color"
+            app:strokeWidth="0dp">
 
 
             <RelativeLayout
@@ -54,8 +53,8 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
                             android:layout_centerVertical="true"
+                            android:layout_marginStart="12dp"
                             android:layout_toEndOf="@id/userImage"
                             android:orientation="vertical">
 
@@ -106,6 +105,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
                         android:ellipsize="end"
                         android:fontFamily="@font/open_sans"
                         android:lineSpacingExtra="4dp"
@@ -119,17 +119,39 @@
                         android:layout_width="match_parent"
                         android:layout_height="250dp"
                         android:layout_gravity="start"
-                        android:layout_marginVertical="12dp"
-                        android:src="@drawable/img_award"
+                        android:src="@drawable/wallpaper"
                         android:transitionName="request_image_transition"
-                        android:visibility="gone" />
+                        android:visibility="visible" />
 
-                    <androidx.appcompat.widget.LinearLayoutCompat
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="8dp"
                         android:gravity="center_vertical"
                         android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnLike"
+                            style="@style/Widget.Material3.Button.IconButton.Outlined"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginEnd="5dp"
+                            android:background="@color/white"
+                            app:icon="@drawable/ic_heart"
+                            app:iconGravity="textStart"
+                            app:iconSize="24dp"
+                            app:iconTint="@color/like_button"
+                            app:strokeWidth="2dp"
+                            app:toggleCheckedStateOnClick="true" />
+
+                        <TextView
+                            android:fontFamily="@font/open_sans"
+                            android:id="@+id/txtLikes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0 likes"
+                            android:textColor="@color/secondary_text"
+                            android:textSize="13sp" />
 
                         <View
                             android:layout_width="0dp"
@@ -139,23 +161,22 @@
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/btnContact"
                             style="@style/Widget.Material3.Button.TextButton"
-                            android:layout_width="wrap_content"
+                            android:layout_width="44dp"
                             android:layout_height="40dp"
                             android:layout_marginEnd="6dp"
                             android:elevation="2dp"
-                            android:text="Message"
                             android:textColor="@color/on_secondary_btn_color"
                             android:textSize="12sp"
                             app:backgroundTint="@color/secondary_btn_background_color"
                             app:icon="@drawable/ic_message"
-                            app:iconGravity="textStart"
+                            app:iconGravity="end"
                             app:iconSize="20dp"
-                            app:rippleColor="@color/grey"
                             app:iconTint="@color/on_secondary_btn_color"
+                            app:rippleColor="@color/grey"
                             app:toggleCheckedStateOnClick="true" />
 
 
-                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    </LinearLayout>
                 </LinearLayout>
 
                 <com.google.android.material.card.MaterialCardView
@@ -189,8 +210,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Delete"
                             android:fontFamily="@font/open_sans_semibold"
+                            android:text="Delete"
                             android:textColor="@color/icon_color"
                             android:textStyle="bold" />
 
@@ -200,35 +221,35 @@
             </RelativeLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="18dp"
-            android:gravity="center_vertical">
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginHorizontal="18dp"-->
+        <!--            android:gravity="center_vertical">-->
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnLike"
-                style="@style/Widget.Material3.Button.IconButton.Outlined"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginEnd="5dp"
-                android:background="@color/white"
-                app:icon="@drawable/ic_heart"
-                app:iconGravity="textStart"
-                app:iconSize="25dp"
-                app:iconTint="@color/like_button"
-                app:strokeWidth="2dp"
-                app:toggleCheckedStateOnClick="true" />
+        <!--            <com.google.android.material.button.MaterialButton-->
+        <!--                android:id="@+id/btnLike"-->
+        <!--                style="@style/Widget.Material3.Button.IconButton.Outlined"-->
+        <!--                android:layout_width="25dp"-->
+        <!--                android:layout_height="25dp"-->
+        <!--                android:layout_marginEnd="5dp"-->
+        <!--                android:background="@color/white"-->
+        <!--                app:icon="@drawable/ic_heart"-->
+        <!--                app:iconGravity="textStart"-->
+        <!--                app:iconSize="25dp"-->
+        <!--                app:iconTint="@color/like_button"-->
+        <!--                app:strokeWidth="2dp"-->
+        <!--                app:toggleCheckedStateOnClick="true" />-->
 
-            <TextView
-                android:id="@+id/txtLikes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/open_sans"
-                android:text="0 likes"
-                android:textColor="@color/text"
-                android:textSize="14sp" />
-        </LinearLayout>
+        <!--            <TextView-->
+        <!--                android:id="@+id/txtLikes"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:fontFamily="@font/open_sans"-->
+        <!--                android:text="0 likes"-->
+        <!--                android:textColor="@color/text"-->
+        <!--                android:textSize="14sp" />-->
+        <!--        </LinearLayout>-->
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>

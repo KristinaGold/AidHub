@@ -28,7 +28,8 @@
         android:layout_gravity="center"
         android:layout_marginStart="10dp"
         android:textColor="@color/title_text"
-        android:textSize="22sp"
-        android:textStyle="bold" />
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
 </androidx.appcompat.widget.Toolbar>
 

@@ -1,6 +1,7 @@
 package com.example.aidhub.activities
 
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
 import android.os.Handler
@@ -105,6 +106,7 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         assignTokenToUser()
     }
+
 
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
@@ -407,6 +409,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (isStatusFinal && isDataReady && lastHandledRequestId != request.requestId) {
+            playSoundEffect(R.raw.inappnotificationsound)
             lastHandledRequestId = request.requestId
             DialogHelper.showRequestCompletedDialog(
                 this,
@@ -414,8 +417,17 @@ class MainActivity : AppCompatActivity() {
                 request.rating,
                 request.points
             ) {
+                topBarViewModel.doNotShowRequestButton()
                 requestViewModel.clearCurrentRequest()
             }
         }
+    }
+
+    fun playSoundEffect(soundResourceId: Int) {
+        val mediaPlayer = MediaPlayer.create(this, soundResourceId)
+        mediaPlayer.setOnCompletionListener { mp ->
+            mp.release()
+        }
+        mediaPlayer.start()
     }
 }
