@@ -29,7 +29,7 @@ Whether it's moving a heavy couch, borrowing a tool, or providing professional a
 
 * **Language:** Kotlin.
 
-* **Architecture:** MVVM with Clean Multu-Module Architecture for maximum scalability and testability.
+* **Architecture:** MVVM with Clean Multy-Module Architecture for maximum scalability and testability.
     * `:app` **Module:** Handles the UI layer (Fragments, ViewModels, UI Logic), DI setup, and navigation.
     * `:data` **Module:** A standalone module responsible for all data-related logic. It abstracts database access (Firestore), API calls, and Repository patterns, ensuring a strict separation between the Data Layer and the UI Layer.
 
